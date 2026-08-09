@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  human_ai_app:
+    build: .
+    environment:
+      # Pass X11 Display for GUI forwarding (Linux/Mac)
+      - DISPLAY=${DISPLAY}
+    volumes:
+      # Share the X11 socket for GUI
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    network_mode: host
