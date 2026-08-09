@@ -6,16 +6,13 @@ def get_ai_suggestion(situation):
     return "Send helicopter to Sector A and B first."
 
 def on_decide():
-    messagebox.showinfo("Decision", "Your decision has been recorded.
-Please fill the feedback form.")
+    messagebox.showinfo("Decision", "Your decision has been recorded.\nPlease fill the feedback form.")
 
 # GUI setup
 root = tk.Tk()
 root.title("Human-AI Teaming - Emergency Decision System")
 
-situation_text = "FLOOD ALERT: 5 sectors are in danger.
-You have 2 helicopters.
-Where will you send them first?"
+situation_text = "FLOOD ALERT: 5 sectors are in danger.\nYou have 2 helicopters.\nWhere will you send them first?"
 tk.Label(root, text=situation_text, padx=20, pady=10).pack()
 
 ai_suggestion = get_ai_suggestion(situation_text)
